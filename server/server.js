@@ -6,7 +6,7 @@ const server = http.createServer(app);
 
 const PORT = process.env.PORT ?? 4000;
 
-app.use(express.static("public"))
+app.use(express.static("client/dist"))
 
 
 server.listen(PORT, ()=>{
