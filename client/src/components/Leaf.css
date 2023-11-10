@@ -1,0 +1,48 @@
+#container-leaf{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+#container-leaf h1{
+    font-size: clamp(10px, 4vw, 30px);
+}
+
+#container-leaf__download{
+    padding: 0 4rem;
+    height: 2.7rem;
+    background: rgba(15, 158, 51, 0.624);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #000;
+    gap: .5rem;
+    font-weight: 700;
+}
+
+#container-leaf__download:hover{
+    background: rgba(15, 158, 51, 0.446);
+}
+
+#container-leaf__download #container-leaf__container-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-leaf__download #container-leaf__container-icon svg{
+    height: 2.2rem;
+    width: 2.2rem;
+}
