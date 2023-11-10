@@ -1,14 +1,14 @@
 import http from "http";
 import express from "express";
 import {Server as SocketServer} from "socket.io";
-import {PORT} from "./config.js";
+// import {PORT} from "./config.js";
 
 
 const app = express();
 const server = http.createServer(app);
 const io = new SocketServer(server, {
     cors: {
-        origin: "http://localhost:5173"
+        origin: "*"
     }
 });
 
@@ -33,5 +33,5 @@ app.get("/", (req, res)=>{
 
 
 server.listen(process.env.PORT ?? 4000, ()=>{
-    console.log("Servidor inicializado en el puerto: " + PORT);
+    console.log("Servidor inicializado en el puerto: " + 4000);
 })
