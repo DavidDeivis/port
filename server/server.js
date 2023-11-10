@@ -1,18 +1,17 @@
-import express from 'express';
-import http from 'http';
+import http from "http";
+import express from "express";
 
 const app = express();
 const server = http.createServer(app);
 
-const PORT = process.env.PORT ?? 4000;
-
-app.use(express.static("client/dist"))
-
-
-server.listen(PORT, ()=>{
-    console.log("Servidor Inicializado e el PORT: " + PORT);
-})
+app.use(express.static("client/dist"));
 
 app.get("/", (req, res)=>{
-    console.log("Un usuario ha ingresado")
+    
+})
+
+
+
+server.listen(process.env.PORT ?? 3500, ()=>{
+    console.log("Servidor inicializado en el puerto: " + PORT);
 })
