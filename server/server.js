@@ -1,11 +1,18 @@
 import http from "node:http";
 import express from "express";
 import {Server as socketServer} from "socket.io";
+import cors from "cors";
+
+let count = 0;
 
 
 const app = express();
 const server = http.createServer(app);
-const io = new socketServer(server);
+const io = new socketServer(server, {
+    cors: {
+        origin: "*"
+    }
+});
 
 app.use(express.static("client/dist"));
 
@@ -17,7 +24,11 @@ app.get("/", (req, res)=>{
 
 io.on("connection", (socket)=>{
 
-    console.log("a socket connected")
+    count++;
+
+    // console.log(count);
+
+    console.log("Number of users who were connected: " + count);
 
 })
 
