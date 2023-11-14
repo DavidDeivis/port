@@ -13,7 +13,7 @@ let PORT = "";
 if(UrlOrigin.includes("localhost")) {
   PORT = UrlOrigin.substring(0, UrlOrigin.length - 4) + 4000;
 } else {
-  PORT = UrlOrigin.substring(0, UrlOrigin.length) + ":" + 10000;
+  PORT = UrlOrigin;
 }
 
 console.log(PORT)
