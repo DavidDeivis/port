@@ -3,6 +3,8 @@ import express from "express";
 import {Server as socketServer} from "socket.io";
 import cors from "cors";
 
+let PORT = process.env.PORT ?? 4000;
+
 let count = 0;
 
 
@@ -32,6 +34,6 @@ io.on("connection", (socket)=>{
 
 })
 
-server.listen(process.env.PORT ?? 4000, ()=>{
-    console.log("Servidor inicializado en el puerto: " + 4000);
+server.listen(PORT, ()=>{
+    console.log("Servidor inicializado en el puerto: " + PORT);
 })

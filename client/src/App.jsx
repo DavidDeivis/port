@@ -8,12 +8,12 @@ import io from "socket.io-client";
 // https://deivis-port.onrender.com:10000
 
 let UrlOrigin = window.location.origin;
-let PORT;
+let PORT = "";
 
 if(UrlOrigin.includes("localhost")) {
   PORT = UrlOrigin.substring(0, UrlOrigin.length - 4) + 4000;
 } else {
-  PORT = UrlOrigin.substring(0, UrlOrigin.length) + ":" + 4000;
+  PORT = UrlOrigin.substring(0, UrlOrigin.length) + ":" + 10000;
 }
 
 console.log(PORT)
