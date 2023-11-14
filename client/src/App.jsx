@@ -8,9 +8,9 @@ import io from "socket.io-client";
 let UrlOrigin = window.location.origin;
 let PORT;
 
-try {
+if(UrlOrigin.includes("localhost")) {
   PORT = UrlOrigin.substring(0, UrlOrigin.length - 4) + 4000;
-} catch {
+} else {
   PORT = UrlOrigin.substring(0, UrlOrigin.length) + ":" + 10000;
 }
 
