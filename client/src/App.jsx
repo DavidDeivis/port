@@ -14,6 +14,8 @@ try {
   PORT = UrlOrigin.substring(0, UrlOrigin.length) + ":" + 10000;
 }
 
+console.log(PORT)
+
 const socket = io(PORT);
 
 function App() {
